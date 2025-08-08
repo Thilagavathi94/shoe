@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.main-header {
+    background-color: #f7a956; /* The orange color from the image */
+    padding: 10px 20px;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.search-bar-container input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 300px;
+}
+
+.user-icons a {
+    color: #333;
+    margin-left: 15px;
+    font-size: 30px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.logo {
+    /* Styles for the logo, e.g., sizing */
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.nav-links .active a {
+    color: #f7a956;
+    border-bottom: 2px solid #f7a956;
+}
+.logo img{
+    width: 40%;
+}
+/* About Us Page Styling */
+.about-us-container {
+    background-color: white;
+    padding: 40px 100px;
+    max-width: 1200px;
+    margin: 20px auto;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-us-container h2, .about-us-container h3 {
+    text-align: center;
+    color: #31336c;
+}
+
+.our-story, .why-choose-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.our-story .content-text, .why-choose-us .content-text {
+    flex: 1;
+    padding: 0 50px;
+}
+
+.image-with-mask {
+    width: 400px;
+    height: 400px;
+    background-color: #fce2c5; /* The light orange background behind the shoe */
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-with-mask.reverse-mask {
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+.image-with-mask img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.image-with-mask.reverse-mask img {
+    bottom: auto;
+    top: 0;
+    left: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li::before {
+    content: "•";
+    color: #f7a956;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar-container { padding: 10px 20px; }
+    .navbar-top, .navbar-bottom { flex-direction: column; }
+    .search-box { margin-bottom: 10px; width: 100%; }
+    .navbar-icons { margin-top: 10px; }
+    .nav-links { margin-top: 10px; flex-wrap: wrap; justify-content: center; }
+
+    .about-us-container { padding: 20px; }
+    .our-story, .why-choose-us {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image-with-mask { margin-top: 20px; }
+    .why-choose-us .image-with-mask { order: -1; }
+    .our-story .content-text, .why-choose-us .content-text {
+        padding: 0;
+    }
+}
+/* --- Footer Section --- */
+.main-footer {
+    background-color: grey;
+    color: #f0f0f0;
+    padding: 60px 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-links, .footer-shops, .footer-contact, .footer-socials {
+    padding: 0 10px;
+}
+
+.footer-links h4, .footer-shops h4, .footer-contact h4, .footer-socials h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-links ul, .footer-shops ul, .footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a, .footer-shops a, .footer-contact a {
+    color: white;
+    text-decoration: none;
+    line-height: 2.2;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover, .footer-shops a:hover, .footer-contact a:hover {
+    color: var(--primary-color);
+}
+
+.footer-contact li span {
+    margin-right: 10px;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}

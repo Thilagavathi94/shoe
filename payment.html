@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success | ShopMart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="asset/css/cart.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .payment-container {
+            padding: 2rem;
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            max-width: 600px;
+            width: 90%;
+        }
+        .payment-container h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #31336c;
+            margin-bottom: 1rem;
+        }
+        .payment-container p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .order-number {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #ff6600;
+            margin-bottom: 2rem;
+        }
+        .track-order-btn {
+            background-color: #31336c;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .track-order-btn:hover {
+            background-color: #212249;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Header and Navigation Bar -->
+   <header class="main-header">
+        <div class="top-nav">
+            <div class="search-bar-container">
+                <input type="search" placeholder="Search">
+                </div>
+            <div class="user-icons">
+                <a href="wishlist.html">
+                   <i class='bx bx-heart'></i>
+                </a>
+                <a href="cart.html">
+                    <i class='bx bx-shopping-bag'></i>
+                </a>
+                <a href="contact.html">
+                  <i class='bx bx-user-circle'></i>
+                </a>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="Shoe Website Imges/logo.jpeg" alt="Shop Mart Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Style Hub</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="collection.html">Collections</a></li>
+                <li class="active"><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="payment-container">
+            <i class="fas fa-check-circle text-green-500 text-5xl mb-4"></i>
+            <h2>Payment Successful!</h2>
+            <p>Thank you for your order. Your order has been placed successfully.</p>
+            <p class="order-number">Order Number: <span id="order-id"></span></p>
+            <a href="track-order.html" class="track-order-btn">Track Order</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-shops">
+                <h4>Shops</h4>
+                <ul>
+                    <li><a href="sneaker.html">Sneakers</a></li>
+                    <li><a href="retro.html">Retro & Classic</a></li>
+                    <li><a href="collection.html">Collections</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact By</h4>
+                <ul>
+                    <li><a href="#"><span>&#x1F4CD;</span> 123 Shoe Street, Reva Plaza, Mad</a></li>
+                    <li><a href="#"><span>&#x2709;</span> Email: shoemart@walkonshoes.com</a></li>
+                    <li><a href="#"><span>&#x1F4DE;</span> Phone: +1 (800) 123-4567</a></li>
+                    <li><a href="#"><span>&#x2709;</span> Email: support@walkonshoes.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h4>Follow With Us</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="Shoe Website Imges/goo.png" alt="Google"></a>
+                    <a href="#"><img src="Shoe Website Imges/fac.png" alt="Facebook"></a>
+                    <a href="#"><img src="Shoe Website Imges/ins.jpeg" alt="Instagram"></a>
+                    <a href="#"><img src="Shoe Website Imges/what.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Generate a random order number
+            const orderId = 'ORD-' + Math.floor(Math.random() * 1000000000);
+            
+            // Save the order ID to local storage for the tracking page to use
+            localStorage.setItem('lastOrderId', orderId);
+
+            // Display the order ID on the page
+            document.getElementById('order-id').textContent = orderId;
+            
+            // Clear the cart when the payment page is loaded
+            localStorage.removeItem('shopMartCart');
+        });
+    </script>
+</body>
+</html>

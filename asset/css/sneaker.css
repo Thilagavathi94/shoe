@@ -1,0 +1,276 @@
+/* General body and font styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7a956;
+}
+
+/* Navbar Styling */
+.navbar-container {
+    padding: 20px 50px;
+}
+
+.navbar-top, .navbar-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+.navbar-top { margin-bottom: 10px; }
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 16px;
+    width: 250px;
+}
+
+.navbar-icons a {
+    color: #333;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.logo img { height: 50px; }
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.nav-links a.active {
+    color: #f7a956;
+    border-bottom: 2px solid #f7a956;
+}
+
+/* Shop Page Styling */
+.shop-container {
+    background-color: white;
+    padding: 40px 100px;
+    max-width: 1200px;
+    margin: 20px auto;
+    line-height: 1.6;
+    color: #333;
+}
+
+.section-title {
+    text-align: center;
+    color: #31336c;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.favorite-btn:hover {
+    color: #f7a956;
+}
+
+.product-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #31336c;
+}
+
+.product-name, .brand {
+    color: #666;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.old-price {
+    font-size: 0.9em;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.rating {
+    margin: 10px 0;
+}
+
+.stars {
+    color: #f7a956;
+}
+
+.buy-now-btn {
+    display: inline-block;
+    background-color: #f7a956;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.trending-section {
+    margin-top: 60px;
+}
+
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.trending-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.trending-card h3 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.trending-card p {
+    color: #666;
+    font-size: 0.9em;
+    margin: 5px 0 15px;
+}
+
+.shop-button {
+    display: inline-block;
+    background-color: #f7a956;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Footer Styling */
+.main-footer {
+    background-color: #31336c;
+    color: white;
+    padding: 40px 100px;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 150px;
+    margin-right: 20px;
+}
+
+.footer-links, .footer-contact, .footer-social {
+    flex: 1;
+    min-width: 150px;
+    margin-right: 20px;
+}
+
+.footer-links h4, .footer-contact h4, .footer-social h4 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a, .footer-contact p, .footer-contact a {
+    text-decoration: none;
+    color: white;
+    line-height: 2;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar-container { padding: 10px 20px; }
+    .navbar-top, .navbar-bottom { flex-direction: column; }
+    .search-box { margin-bottom: 10px; width: 100%; }
+    .navbar-icons { margin-top: 10px; }
+    .nav-links { margin-top: 10px; flex-wrap: wrap; justify-content: center; }
+
+    .shop-container { padding: 20px; }
+    .product-grid, .trending-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-footer { padding: 20px; }
+    .footer-content { flex-direction: column; text-align: center; }
+    .footer-links, .footer-contact, .footer-social { margin-top: 20px; }
+    .footer-contact p { text-align: left; }
+    .footer-social .social-icons {
+        display: flex;
+        justify-content: center;
+    }
+}
